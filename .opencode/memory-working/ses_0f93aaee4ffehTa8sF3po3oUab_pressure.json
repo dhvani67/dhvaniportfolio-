@@ -1,0 +1,25 @@
+{
+  "sessionID": "ses_0f93aaee4ffehTa8sF3po3oUab",
+  "modelID": "gpt-5.4",
+  "providerID": "openai",
+  "limits": {
+    "context": 272000,
+    "input": 922000,
+    "output": 128000
+  },
+  "calculated": {
+    "maxOutputTokens": 32000,
+    "reserved": 20000,
+    "usable": 902000
+  },
+  "current": {
+    "totalTokens": 31618,
+    "pressure": 0.035053215077605324,
+    "level": "safe"
+  },
+  "thresholds": {
+    "moderate": 676500,
+    "high": 811800
+  },
+  "updatedAt": "2026-06-27T01:52:24.022Z"
+}

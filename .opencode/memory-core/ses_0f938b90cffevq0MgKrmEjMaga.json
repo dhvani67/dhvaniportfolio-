@@ -1,0 +1,21 @@
+{
+  "sessionID": "ses_0f938b90cffevq0MgKrmEjMaga",
+  "blocks": {
+    "goal": {
+      "value": "Rename asset files to lowercase kebab-case and update root HTML references in the dhvaniportfolio project.",
+      "charLimit": 1000,
+      "lastModified": "2026-06-27T01:54:20.169Z"
+    },
+    "progress": {
+      "value": "",
+      "charLimit": 2000,
+      "lastModified": "2026-06-27T01:54:20.169Z"
+    },
+    "context": {
+      "value": "Editing /home/anmol/Projects/experiments/dhvaniportfolio-\nRoot HTML files: index.html, project-from-soil-to-soul.html, project-rumourme.html, project-enemies.html, project-velvet-roots.html\nAssets under assets/ and assets/images/ only; no layout/style changes",
+      "charLimit": 1500,
+      "lastModified": "2026-06-27T01:54:20.223Z"
+    }
+  },
+  "updatedAt": "2026-06-27T01:54:20.223Z"
+}

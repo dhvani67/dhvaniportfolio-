@@ -1,0 +1,7 @@
+{
+  "callID": "call_vhu27vdwTptdJ1AkkUjiT085",
+  "sessionID": "ses_0f93aaee4ffehTa8sF3po3oUab",
+  "tool": "todowrite",
+  "fullOutput": "[\n  {\n    \"content\": \"Rename asset files to web-safe lowercase kebab-case names\",\n    \"status\": \"in_progress\",\n    \"priority\": \"high\"\n  },\n  {\n    \"content\": \"Update HTML references to renamed assets\",\n    \"status\": \"pending\",\n    \"priority\": \"high\"\n  },\n  {\n    \"content\": \"Verify all local asset links resolve after renaming\",\n    \"status\": \"pending\",\n    \"priority\": \"high\"\n  }\n]",
+  "timestamp": 1782525142518
+}

@@ -1,0 +1,33 @@
+{
+  "sessionID": "ses_0f93aaee4ffehTa8sF3po3oUab",
+  "slots": {
+    "error": [],
+    "decision": [],
+    "todo": [],
+    "dependency": []
+  },
+  "pool": [
+    {
+      "id": "wm_1782525030558_mbfyh7f",
+      "type": "file-path",
+      "content": "/home/anmol/Projects/experiments/dhvaniportfolio-/.opencode/memory-working/ses_0f93aaee4ffehTa8sF3po3oUab_pressure.js",
+      "source": "tool:glob",
+      "timestamp": 1782525030557,
+      "relevanceScore": 1.35,
+      "mentions": 1,
+      "lastEventCounter": 2
+    },
+    {
+      "id": "wm_1782525030654_yds8n1l",
+      "type": "file-path",
+      "content": "//fonts.go",
+      "source": "tool:read",
+      "timestamp": 1782525030652,
+      "relevanceScore": 1,
+      "mentions": 1,
+      "lastEventCounter": 2
+    }
+  ],
+  "eventCounter": 2,
+  "updatedAt": "2026-06-27T01:50:30.654Z"
+}

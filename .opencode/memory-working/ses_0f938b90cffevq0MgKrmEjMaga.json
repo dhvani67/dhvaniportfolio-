@@ -1,0 +1,22 @@
+{
+  "sessionID": "ses_0f938b90cffevq0MgKrmEjMaga",
+  "slots": {
+    "error": [],
+    "decision": [
+      {
+        "type": "decision",
+        "content": "Rename assets in assets/ and assets/images/ to lowercase kebab-case, then update root HTML references.",
+        "source": "manual",
+        "timestamp": 1782525254949,
+        "mentions": 1,
+        "id": "wm_1782525254949_zmpylxl",
+        "relevanceScore": 0
+      }
+    ],
+    "todo": [],
+    "dependency": []
+  },
+  "pool": [],
+  "eventCounter": 1,
+  "updatedAt": "2026-06-27T01:54:14.949Z"
+}
