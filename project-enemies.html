@@ -19,7 +19,7 @@
       <a href="index.html#work">Work</a>
       <a href="index.html#process">Process</a>
       <a href="index.html#contact">Contact</a>
-      <a href="assets/dhvani-chauhan-resume.pdf" target="_blank" rel="noopener" class="nav-resume">Resume</a>
+      <a href="assets/Dhvani-Chauhan-Resume.pdf" target="_blank" rel="noopener" class="nav-resume">Resume</a>
     </div>
   </div>
 </nav>
@@ -40,11 +40,11 @@
 
 <section class="project-section">
   <div class="wrap">
-    <img class="cover-img" src="assets/images/enemies-cover-mockup.jpeg" alt="Enemies cover">
+    <img class="cover-img" src="assets/images/movie mockup.jpeg" alt="Enemies cover">
   </div>
 </section>
 
-<section class="project-section">
+<section class="project-section reveal">
   <div class="wrap">
     <div class="section-head">
       <span class="section-num">01</span>
@@ -53,11 +53,22 @@
         <p class="section-desc">What the project set out to do, and the story behind the design.</p>
       </div>
     </div>
-    <p class="body-text">This poster concept for "Enemies: A Tale for Lads and Lasses" set out to capture narrative tension before a viewer ever sees the trailer. Layered type and a restrained colour palette were used to suggest mood and conflict, letting the composition do the storytelling.</p>
+    <div class="brief-block">
+      <span class="brief-label">Process</span>
+      <p>Work on this poster started with document illustration concepts and a moodboard exploring tone — tension, distance, and an unresolved conflict between two figures. From there, type layering and a restrained colour palette were tested to find a composition that read as dramatic without tipping into melodrama.</p>
+    </div>
+    <div class="brief-block">
+      <span class="brief-label">Challenge</span>
+      <p>The hardest part was suggesting narrative tension with almost no information — no tagline, no cast, just two silhouettes and a title. Getting the framing, negative space, and type hierarchy to carry that weight took several rounds of composition testing before the poster felt like it was telling a story rather than just looking moody.</p>
+    </div>
+    <div class="brief-block">
+      <span class="brief-label">Outcome</span>
+      <p>The final poster uses layered type and a restrained palette to set the tone before a viewer ever sees a trailer, letting the composition do the storytelling on its own — one of the more editorially considered pieces in this portfolio.</p>
+    </div>
   </div>
 </section>
 
-<section class="project-section sketch-section">
+<section class="project-section sketch-section reveal">
   <div class="wrap">
     <div class="section-head">
       <span class="section-num">02</span>
@@ -66,21 +77,21 @@
         <p class="section-desc">Early concepts, sketches, and exploration before the final direction.</p>
       </div>
     </div>
-    <div class="sketch-grid" id="sketch-grid-1">
+    <div class="sketch-grid reveal-group" id="sketch-grid-1">
       <div class="sketch-placeholder">
-        <img class="sketch-img" src="assets/images/enemies-doc-illustration-concept.png" alt="Enemies document illustration concept">
+        <img class="sketch-img" src="assets/images/Doc ill emeies.png" alt="Enemies document illustration concept">
       </div>
       <div class="sketch-placeholder">
-        <img class="sketch-img" src="assets/images/enemies-doc-setup-2.png" alt="Enemies document setup">
+        <img class="sketch-img" src="assets/images/Doc setup 2.png" alt="Enemies document setup">
       </div>
       <div class="sketch-placeholder">
-        <img class="sketch-img" src="assets/images/enemies-moodboard.png" alt="Enemies moodboard">
+        <img class="sketch-img" src="assets/images/Setches em.png" alt="Enemies sketches">
       </div>
     </div>
   </div>
 </section>
 
-<section class="project-section">
+<section class="project-section reveal">
   <div class="wrap">
     <div class="section-head">
       <span class="section-num">03</span>
@@ -89,12 +100,12 @@
         <p class="section-desc">The finished poster design.</p>
       </div>
     </div>
-    <div class="final-grid" id="final-grid-1">
+    <div class="final-grid reveal-group" id="final-grid-1">
       <div class="sketch-placeholder">
-        <img class="final-img" src="assets/images/enemies-final-poster.png" alt="Enemies final poster design">
+        <img class="final-img" src="assets/images/FInal poster .png" alt="Enemies final poster design">
       </div>
       <div class="sketch-placeholder">
-        <img class="final-img" src="assets/images/movie book cover.png" alt="Enemies final poster design">
+        <img class="final-img" src="assets/images/2 final.png" alt="Enemies final poster design, alternate">
       </div>
     </div>
   </div>
@@ -105,12 +116,18 @@
     <span class="label">Next Project</span>
     <a class="next-link" href="project-from-soil-to-soul.html">From Soil to Soul →</a>
   </div>
-  
 </section>
 
 <footer>
   © 2026 Dhvani Chauhan. All rights reserved.
 </footer>
+
+<script>
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); } });
+}, {threshold:0.12});
+document.querySelectorAll('.reveal, .reveal-group').forEach(el => obs.observe(el));
+</script>
 
 </body>
 </html>
