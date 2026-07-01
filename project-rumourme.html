@@ -19,7 +19,7 @@
       <a href="index.html#work">Work</a>
       <a href="index.html#process">Process</a>
       <a href="index.html#contact">Contact</a>
-      <a href="assets/dhvani-chauhan-resume.pdf" target="_blank" rel="noopener" class="nav-resume">Resume</a>
+      <a href="assets/Dhvani-Chauhan-Resume.pdf" target="_blank" rel="noopener" class="nav-resume">Resume</a>
     </div>
   </div>
 </nav>
@@ -40,11 +40,11 @@
 
 <section class="project-section">
   <div class="wrap">
-    <img class="cover-img" src="assets/images/rumour-me-cover.jpeg" alt="RumourMe cover">
+    <img class="cover-img" src="assets/images/rumour.Me .jpeg" alt="RumourMe cover">
   </div>
 </section>
 
-<section class="project-section">
+<section class="project-section reveal">
   <div class="wrap">
     <div class="section-head">
       <span class="section-num">01</span>
@@ -53,11 +53,22 @@
         <p class="section-desc">What the project set out to do, and the story behind the brand.</p>
       </div>
     </div>
-    <p class="body-text">RumourMe is a beauty brand concept built around confidence and self-expression. The challenge was to create a visual identity that felt bold and current, standing apart from the soft, muted aesthetic common across the beauty category, while still feeling approachable.</p>
+    <div class="brief-block">
+      <span class="brief-label">Process</span>
+      <p>RumourMe began with a moodboard built around confidence, colour, and the kind of bold, gossip-adjacent tone the name suggests. From there, logo sketches and colour testing helped settle on a palette punchy enough to stop a scroll, before moving into ad and coupon layouts that carried that same energy across formats.</p>
+    </div>
+    <div class="brief-block">
+      <span class="brief-label">Challenge</span>
+      <p>The main challenge was striking a balance between bold and approachable — early directions leaned either too soft (blending into typical beauty branding) or too loud (feeling more like a meme than a brand). Refining the type pairing and toning the colour palette helped the identity feel current and confident without losing approachability.</p>
+    </div>
+    <div class="brief-block">
+      <span class="brief-label">Outcome</span>
+      <p>The final identity and campaign visuals feel bold and current, standing apart from the soft, muted aesthetic common across the beauty category, while still staying approachable enough to invite people in rather than intimidate them.</p>
+    </div>
   </div>
 </section>
 
-<section class="project-section sketch-section">
+<section class="project-section sketch-section reveal">
   <div class="wrap">
     <div class="section-head">
       <span class="section-num">02</span>
@@ -66,21 +77,21 @@
         <p class="section-desc">Early concepts, sketches, and exploration before the final direction.</p>
       </div>
     </div>
-    <div class="sketch-grid" id="sketch-grid-1">
+    <div class="sketch-grid reveal-group" id="sketch-grid-1">
       <div class="sketch-placeholder">
-        <img class="sketch-img" src="assets/images/rumour-me-moodboard.png" alt="RumourMe moodboard">
+        <img class="sketch-img" src="assets/images/Moodborad rumourme .png" alt="RumourMe moodboard">
       </div>
       <div class="sketch-placeholder">
-        <img class="sketch-img" src="assets/images/rumour-me-logo-sketches.png" alt="RumourMe logo sketches">
+        <img class="sketch-img" src="assets/images/rumour.Me .jpeg" alt="RumourMe logo sketches">
       </div>
       <div class="sketch-placeholder">
-        <img class="sketch-img" src="assets/images/rumour-me-colours.png" alt="RumourMe colour exploration">
+        <img class="sketch-img" src="assets/images/Reumour colours.png" alt="RumourMe colour exploration">
       </div>
     </div>
   </div>
 </section>
 
-<section class="project-section">
+<section class="project-section reveal">
   <div class="wrap">
     <div class="section-head">
       <span class="section-num">03</span>
@@ -89,12 +100,12 @@
         <p class="section-desc">The finished brand identity and campaign visuals.</p>
       </div>
     </div>
-    <div class="final-grid" id="final-grid-1">
+    <div class="final-grid reveal-group" id="final-grid-1">
       <div class="sketch-placeholder">
-        <img class="final-img" src="assets/images/rumour-me-ad-campaign.png" alt="RumourMe final ad campaign">
+        <img class="final-img" src="assets/images/ads.png" alt="RumourMe final ad campaign">
       </div>
       <div class="sketch-placeholder">
-        <img class="final-img" src="assets/images/rumour-me-coupon.png" alt="RumourMe final coupon design">
+        <img class="final-img" src="assets/images/Coupon rumourme.png" alt="RumourMe final coupon design">
       </div>
     </div>
   </div>
@@ -110,6 +121,13 @@
 <footer>
   © 2026 Dhvani Chauhan. All rights reserved.
 </footer>
+
+<script>
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); } });
+}, {threshold:0.12});
+document.querySelectorAll('.reveal, .reveal-group').forEach(el => obs.observe(el));
+</script>
 
 </body>
 </html>
