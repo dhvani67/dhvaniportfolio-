@@ -18,95 +18,213 @@
     --accent-soft:#E8D9D2;
     --num-offset:52px;
   }
+
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  body{background:var(--paper);color:var(--ink);font-family:'Inter', sans-serif;}
-  @media (prefers-reduced-motion: reduce){*{animation:none !important; transition:none !important;}}
+
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+
   a{color:inherit;text-decoration:none;}
   img{display:block;max-width:100%;}
+
   .wrap{max-width:1160px;margin:0 auto;padding:0 40px;}
-  nav{position:sticky; top:0; z-index:50;background:var(--paper);border-bottom:1px solid var(--line);}
+
+  nav{
+    position:sticky; top:0; z-index:50;
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+  }
   nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;}
-  .brand{font-family:'Fraunces', serif;font-weight:500;font-size:1.15rem;letter-spacing:0.01em;text-transform:uppercase;}
+  .brand{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:1.15rem;
+    letter-spacing:0.01em;
+    text-transform:uppercase;
+  }
   .brand span{color:var(--accent);}
   .navlinks{display:flex;align-items:center;gap:36px;font-size:0.85rem;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;}
   .navlinks a{position:relative;padding:6px 0;color:var(--ink-soft);transition:color .2s;}
   .navlinks a:hover{color:var(--ink);}
   .navlinks a:focus-visible, .btn:focus-visible, .pcard a:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
-  .nav-resume{border:1.5px solid var(--ink); color:var(--ink) !important;padding:9px 18px !important; transition:background .2s, color .2s, border-color .2s;}
+  .nav-resume{
+    border:1.5px solid var(--ink); color:var(--ink) !important;
+    padding:9px 18px !important; transition:background .2s, color .2s, border-color .2s;
+  }
   .nav-resume:hover{background:var(--ink); color:var(--paper) !important;}
+
   header.hero{border-bottom:1px solid var(--line);}
   .hero-main{padding:100px 0 80px;}
-  h1.title{font-family:'Fraunces', serif;font-weight:400;font-size:clamp(2.4rem, 5vw, 4rem);line-height:1.08;letter-spacing:-0.01em;max-width:780px;}
-  h1.title em{font-style:italic; font-weight:500; color:var(--accent);}
-  .hero-sub{max-width:680px; margin-top:24px;font-size:1rem; line-height:1.7; color:var(--ink-soft);}
-  .hero-stats{display:grid; grid-template-columns:repeat(4, 1fr);margin-top:48px; border-top:1px solid var(--line);}
+
+  .eyebrow{
+    font-size:0.78rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--accent); margin-bottom:20px; display:block;
+  }
+
+  h1.title{
+    font-family:'Fraunces', serif;
+    font-weight:400;
+    font-size:clamp(2.4rem, 5vw, 4rem);
+    line-height:1.08;
+    letter-spacing:-0.01em;
+    max-width:780px;
+  }
+  h1.title em{
+    font-style:italic; font-weight:500; color:var(--accent);
+  }
+
+  .hero-sub{
+    max-width:680px; margin-top:24px;
+    font-size:1rem; line-height:1.7; color:var(--ink-soft);
+  }
+
+  .hero-stats{
+    display:grid; grid-template-columns:repeat(4, 1fr);
+    margin-top:48px; border-top:1px solid var(--line);
+  }
   .side-stat{border-right:1px solid var(--line); padding:20px 28px 0 0;}
   .side-stat:last-child{border-right:none;}
   .side-stat .label{font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft); display:block; margin-bottom:6px;}
   .side-stat .value{font-size:0.98rem; font-weight:600;}
+
   .section{padding:88px 0; border-bottom:1px solid var(--line);}
-  .section-head{display:flex; align-items:baseline; gap:14px; margin-bottom:56px; flex-wrap:wrap;}
+  .section-head{
+    display:flex; align-items:baseline; gap:14px; margin-bottom:56px; flex-wrap:wrap;
+  }
   .section-head-text{flex:1; min-width:240px;}
-  .section-num{font-family:'Fraunces', serif; font-weight:400; font-style:italic; font-size:1.4rem; color:var(--accent);line-height:1;}
-  h2.section-title{font-family:'Fraunces', serif; font-weight:400; font-size:clamp(1.8rem,3.2vw,2.4rem);letter-spacing:-0.01em; margin-bottom:14px;}
+  .section-num{
+    font-family:'Fraunces', serif; font-weight:400; font-style:italic; font-size:1.4rem; color:var(--accent);
+    line-height:1;
+  }
+  h2.section-title{
+    font-family:'Fraunces', serif; font-weight:400; font-size:clamp(1.8rem,3.2vw,2.4rem);
+    letter-spacing:-0.01em; margin-bottom:14px;
+  }
   .section-head-text h2.section-title{display:inline; margin-bottom:0;}
   .section-desc{color:var(--ink-soft); font-size:1rem; line-height:1.6; max-width:560px;}
   .section-head-text .section-desc{display:block; margin-top:10px;}
+
   .about-section-grid{display:grid; grid-template-columns:1fr 280px; gap:64px; align-items:start;}
-  .frame{position:relative; aspect-ratio:4/5; width:100%;background:var(--panel);border:1px solid var(--line);display:flex; align-items:center; justify-content:center;}
+  .frame{
+    position:relative; aspect-ratio:4/5; width:100%;
+    background:var(--panel);
+    border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .frame-initial{font-family:'Fraunces', serif; font-weight:400; font-size:5rem; color:var(--ink-soft);}
   .frame-photo{position:absolute; inset:0; width:100%; height:100%; object-fit:contain; display:block;}
-  .frame-caption{position:absolute; bottom:0; left:0; right:0;border-top:1px solid var(--line); background:var(--paper);padding:12px 14px; font-size:0.72rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase;text-align:center; color:var(--ink-soft);}
+  .frame-caption{
+    position:absolute; bottom:0; left:0; right:0;
+    border-top:1px solid var(--line); background:var(--paper);
+    padding:12px 14px; font-size:0.72rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase;
+    text-align:center; color:var(--ink-soft);
+  }
   .about-copy p{font-size:1.02rem; line-height:1.75; color:var(--ink-soft); margin-bottom:18px;}
   .about-copy p:first-child{font-size:1.12rem; color:var(--ink); font-weight:500;}
   .skills-row{display:flex; gap:0; flex-wrap:wrap; margin-top:28px; border:1px solid var(--line);}
-  .skill-chip{font-size:0.82rem; font-weight:600; padding:10px 18px;border-right:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .skill-chip{
+    font-size:0.82rem; font-weight:600; padding:10px 18px;
+    border-right:1px solid var(--line); border-bottom:1px solid var(--line);
+  }
   .skill-chip:last-child{border-right:none;}
-  .pin-grid{display:grid; grid-template-columns:repeat(2, 1fr);border:1px solid var(--line);}
-  .pcard{background:var(--paper);display:flex; flex-direction:column;border-right:1px solid var(--line);border-bottom:1px solid var(--line);}
+
+  .pin-grid{
+    display:grid; grid-template-columns:repeat(2, 1fr);
+    border:1px solid var(--line);
+  }
+  .pcard{
+    background:var(--paper);
+    display:flex; flex-direction:column;
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
   .pcard:nth-child(2n){border-right:none;}
   .pin-grid .pcard:nth-last-child(-n+2){border-bottom:none;}
-  .pin-grid .pcard:last-child:nth-child(odd){border-right:none;}
+
   .pcard-img-wrap{overflow:hidden; border-bottom:1px solid var(--line);}
-  .pcard-img{width:100%; aspect-ratio:16/10; object-fit:cover; display:block;filter:grayscale(8%);transition:transform .5s ease;}
+  .pcard-img{
+    width:100%; aspect-ratio:16/10; object-fit:cover; display:block;
+    filter:grayscale(8%);
+    transition:transform .5s ease;
+  }
   .pcard:hover .pcard-img{transform:scale(1.03);}
-  .pcard-img-placeholder{width:100%; aspect-ratio:16/10;background:var(--panel);display:flex;align-items:center;justify-content:center;font-size:0.8rem;color:var(--ink-soft);font-weight:600;}
+
   .pcard-body{padding:32px 36px; flex:1; display:flex; flex-direction:column;}
   .pcard-meta{font-size:0.74rem; font-weight:700; color:var(--accent); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:10px;}
-  .pcard h3{font-family:'Fraunces', serif; font-weight:400; font-size:1.45rem; margin-bottom:12px;}
+  .pcard h3{
+    font-family:'Fraunces', serif; font-weight:400; font-size:1.45rem; margin-bottom:12px;
+  }
   .pcard p{color:var(--ink-soft); font-size:0.96rem; line-height:1.6; margin-bottom:24px; flex:1;}
-  .btn{display:inline-flex; align-items:center; gap:8px;font-weight:600; font-size:0.84rem; letter-spacing:0.04em; text-transform:uppercase;padding:13px 0; width:fit-content;border-bottom:2px solid var(--ink); transition:border-color .2s, color .2s;}
+
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    font-weight:600; font-size:0.84rem; letter-spacing:0.04em; text-transform:uppercase;
+    padding:13px 0; width:fit-content;
+    border-bottom:2px solid var(--ink); transition:border-color .2s, color .2s;
+  }
   .btn:hover{color:var(--accent); border-color:var(--accent);}
-  .btn-block{border:1px solid var(--ink); border-bottom-width:1px; padding:14px 26px; background:var(--ink); color:var(--paper);transition:background .2s, color .2s, border-color .2s;}
+  .btn-block{
+    border:1px solid var(--ink); border-bottom-width:1px; padding:14px 26px; background:var(--ink); color:var(--paper);
+    transition:background .2s, color .2s, border-color .2s;
+  }
   .btn-block:hover{background:var(--accent); border-color:var(--accent); color:#fff;}
-  .process-row{display:grid; grid-template-columns:repeat(4,1fr);border:1px solid var(--line);}
-  .process-step{padding:32px 28px; border-right:1px solid var(--line);}
+
+  .process-row{
+    display:grid; grid-template-columns:repeat(4,1fr);
+    border:1px solid var(--line);
+  }
+  .process-step{
+    padding:32px 28px; border-right:1px solid var(--line);
+  }
   .process-step:last-child{border-right:none;}
-  .process-step .num{font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:1.3rem; color:var(--accent); margin-bottom:14px; display:block;}
+  .process-step .num{
+    font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:1.3rem; color:var(--accent); margin-bottom:14px; display:block;
+  }
   .process-step h4{font-size:0.98rem; font-weight:700; margin-bottom:10px;}
   .process-step p{font-size:0.88rem; color:var(--ink-soft); line-height:1.55;}
+
   #contact{border-bottom:none;}
   .contact-grid{display:grid; grid-template-columns:1fr 1px 1fr; gap:0;}
   .contact-left{padding-right:56px; display:flex; flex-direction:column; justify-content:center;}
   .contact-divider{background:var(--line);}
   .contact-right{padding-left:56px; display:flex; flex-direction:column; gap:0; border:1px solid var(--line);}
-  .contact-row{display:flex; align-items:center; justify-content:space-between;padding:22px 28px; border-bottom:1px solid var(--line);}
+  .contact-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:22px 28px; border-bottom:1px solid var(--line);
+  }
   .contact-row:last-child{border-bottom:none;}
   .contact-label{font-size:0.72rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-soft);}
   .contact-value{font-size:0.95rem; font-weight:600;}
   .contact-row a.contact-value:hover{color:var(--accent);}
-  footer{text-align:center; padding:28px 0; font-size:0.82rem; color:var(--ink-soft);}
+
+  footer{
+    text-align:center; padding:28px 0; font-size:0.82rem; color:var(--ink-soft);
+  }
+
   .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
   .reveal.in{opacity:1; transform:translateY(0);}
+
+  /* ── TABLET (≤900px) ── */
   @media (max-width:900px){
+    .wrap{padding:0 24px;}
     .hero-main{padding:60px 0 40px;}
     .hero-stats{grid-template-columns:repeat(2, 1fr); row-gap:20px;}
     .side-stat{border-right:none; border-bottom:1px solid var(--line); padding:0 0 20px;}
     .side-stat:nth-child(odd){border-right:1px solid var(--line); padding-right:20px;}
     .about-section-grid{grid-template-columns:1fr; gap:28px;}
-    .frame{width:140px; margin:0 auto;}
+    .frame{width:200px; margin:0 auto;}
     .pin-grid{grid-template-columns:1fr;}
     .pcard{border-right:none !important;}
+    .pin-grid .pcard:nth-last-child(-n+2){border-bottom:1px solid var(--line);}
+    .pin-grid .pcard:last-child{border-bottom:none;}
     .process-row{grid-template-columns:repeat(2,1fr);}
     .process-step{border-bottom:1px solid var(--line);}
     .contact-grid{grid-template-columns:1fr;}
@@ -114,7 +232,75 @@
     .contact-right{padding-left:0; margin-top:36px;}
     .contact-left{padding-right:0;}
     .navlinks{display:none;}
+    .hamburger{display:flex;}
   }
+
+  /* ── MOBILE (≤600px) ── */
+  @media (max-width:600px){
+    .wrap{padding:0 20px;}
+    .section{padding:56px 0;}
+    .hero-main{padding:44px 0 36px;}
+    h1.title{font-size:clamp(1.8rem,8vw,2.8rem);}
+    .hero-sub{font-size:0.95rem;}
+    .hero-stats{grid-template-columns:1fr 1fr; row-gap:0;}
+    .side-stat{padding:16px 12px 16px 0;}
+    .side-stat:nth-child(odd){padding-right:16px;}
+    .section-head{margin-bottom:32px; gap:10px;}
+    h2.section-title{font-size:1.6rem;}
+    .about-section-grid{gap:20px;}
+    .frame{width:160px;}
+    .about-copy p{font-size:0.97rem;}
+    .skills-row{flex-wrap:wrap;}
+    .skill-chip{font-size:0.78rem; padding:8px 12px;}
+    .pcard-body{padding:22px 20px;}
+    .pcard h3{font-size:1.2rem;}
+    .pcard p{font-size:0.92rem; margin-bottom:18px;}
+    .btn{font-size:0.8rem;}
+    .process-row{grid-template-columns:1fr;}
+    .process-step{border-right:none; border-bottom:1px solid var(--line);}
+    .process-step:last-child{border-bottom:none;}
+    .contact-left{padding-right:0;}
+    .contact-row{padding:18px 16px; flex-direction:column; align-items:flex-start; gap:4px;}
+    .contact-value{font-size:0.88rem;}
+    footer{font-size:0.78rem; padding:20px 0;}
+  }
+
+  /* ── HAMBURGER MENU ── */
+  .hamburger{
+    display:none; flex-direction:column; justify-content:center;
+    gap:5px; cursor:pointer; padding:4px; background:none; border:none;
+    z-index:100;
+  }
+  .hamburger span{
+    display:block; width:22px; height:2px;
+    background:var(--ink); transition:transform .3s ease, opacity .3s ease;
+  }
+  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .hamburger.open span:nth-child(2){opacity:0;}
+  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  /* Mobile slide-down menu */
+  .mobile-menu{
+    display:none; position:fixed; top:72px; left:0; right:0;
+    background:var(--paper); border-bottom:1px solid var(--line);
+    flex-direction:column; padding:16px 24px 24px;
+    z-index:49; box-shadow:0 8px 24px rgba(30,28,26,0.12);
+  }
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{
+    font-size:0.9rem; font-weight:600; letter-spacing:0.06em;
+    text-transform:uppercase; color:var(--ink-soft);
+    padding:14px 0; border-bottom:1px solid var(--line);
+    transition:color .2s;
+  }
+  .mobile-menu a:last-child{border-bottom:none; padding-bottom:0;}
+  .mobile-menu a:hover{color:var(--accent);}
+  .mobile-menu .mob-resume{
+    margin-top:14px; border:1.5px solid var(--ink); color:var(--ink) !important;
+    padding:12px 20px; text-align:center;
+  }
+  .mobile-menu .mob-resume:hover{background:var(--ink); color:var(--paper) !important;}
+
 </style>
 </head>
 <body>
@@ -138,10 +324,22 @@
       <h1 class="title">Brand identity, packaging, and visual design — built on <em>strategy and story</em>.</h1>
       <p class="hero-sub">Hi, my name is Dhvani Chauhan, and I am a Graphic Design student at Humber College. I am passionate about creating meaningful and visually engaging designs that connect with people. My interests include branding, packaging designs, editorial designs, and digital experiences. Through my work, I enjoy combining creativity with problem-solving to develop designs that are both functional and memorable. This portfolio showcases a selection of projects that reflect my skills, growth, and design journey as an emerging designer.</p>
       <div class="hero-stats">
-        <div class="side-stat"><span class="label">Focus</span><span class="value">Branding & Packaging</span></div>
-        <div class="side-stat"><span class="label">Also</span><span class="value">Editorial Design</span></div>
-        <div class="side-stat"><span class="label">Based In</span><span class="value">Toronto, Canada</span></div>
-        <div class="side-stat"><span class="label">Available</span><span class="value">Freelance & Full-time</span></div>
+        <div class="side-stat">
+          <span class="label">Focus</span>
+          <span class="value">Branding & Packaging</span>
+        </div>
+        <div class="side-stat">
+          <span class="label">Also</span>
+          <span class="value">Editorial Design</span>
+        </div>
+        <div class="side-stat">
+          <span class="label">Based In</span>
+          <span class="value">Toronto, Canada</span>
+        </div>
+        <div class="side-stat">
+          <span class="label">Available</span>
+          <span class="value">Freelance & Full-time</span>
+        </div>
       </div>
     </div>
   </div>
@@ -186,20 +384,8 @@
         <p class="section-desc">A few projects spanning branding, packaging, and editorial design.</p>
       </div>
     </div>
-    <div class="pin-grid">
 
-      <!-- House of Lehar — NEW, first card -->
-      <article class="pcard reveal">
-        <div class="pcard-img-wrap">
-          <img class="pcard-img" src="assets/images/house-of-lehar-desktop-mockup.png" alt="House of Lehar branding and web design">
-        </div>
-        <div class="pcard-body">
-          <span class="pcard-meta">Branding &amp; Web Design</span>
-          <h3>House of Lehar</h3>
-          <p>A luxury South Asian fashion brand identity and e-commerce website — spanning brand identity through to mobile and desktop web design.</p>
-          <a class="btn" href="project-house-of-lehar.html">View Project →</a>
-        </div>
-      </article>
+    <div class="pin-grid">
 
       <article class="pcard reveal">
         <div class="pcard-img-wrap">
@@ -207,7 +393,7 @@
         </div>
         <div class="pcard-body">
           <span class="pcard-meta">Wine Branding Campaign</span>
-          <h3>From Soil to Soul</h3>
+          <h3>From Soil to Soul & Valvet Roots label</h3>
           <p>An editorial-driven wine brand campaign about place, people, and slow storytelling — built around earthy textures and a quiet colour story.</p>
           <a class="btn" href="project-from-soil-to-soul.html">View Project →</a>
         </div>
@@ -329,5 +515,145 @@
   reveals.forEach(el=>obs.observe(el));
 </script>
 
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+  function closeMobile(){
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  }
+</script>
+</body>
+</html>
+<div class="page">
+  <header class="resume-header">
+    <div>
+      <div class="name">Dhvani <span>Chauhan</span></div>
+      <div class="title-label">Graphic Designer</div>
+    </div>
+    <div class="contact-list">
+      Toronto, Canada · ON M9W 3L9<br>
+      (+1) 647-569-0468<br>
+      <a href="mailto:dhvanicdesign@gmail.com">dhvanicdesign@gmail.com</a><br>
+      <a href="https://www.dhvanichauhan.com">dhvanichauhan.com</a><br>
+      <a href="https://www.linkedin.com/in/dhvanichauhan/">linkedin.com/in/dhvanichauhan</a>
+    </div>
+  </header>
+  <div class="body-grid">
+    <main>
+      <div class="section">
+        <div class="section-label">Personal Overview</div>
+        <p class="overview">Detail-oriented graphic design student with a strong foundation in branding, layout, and visual communication. Experienced in creating clear, well-structured designs across print and digital platforms. Comfortable working through feedback, managing multiple projects, and meeting deadlines. Currently building a professional portfolio and seeking opportunities to grow as a graphic designer in a collaborative environment.</p>
+      </div>
+      <div class="section">
+        <div class="section-label">Work Experience</div>
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Graphic Design Student Projects</span>
+            <span class="entry-date">2023 – Present</span>
+          </div>
+          <div class="entry-org">Humber Polytechnic · Etobicoke, ON</div>
+          <ul>
+            <li>Designed branding systems including logos, colour palettes, and typography for conceptual and client-based projects.</li>
+            <li>Created print and digital layouts — posters, social media graphics, packaging concepts, and editorial spreads.</li>
+            <li>Developed UI/UX wireframes and visual designs focused on usability and user experience.</li>
+            <li>Produced illustrations and visual assets to support storytelling and brand identity.</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Amazon Warehouse Associate</span>
+            <span class="entry-date">Feb 2022 – Aug 2022</span>
+          </div>
+          <div class="entry-org">Amazon · Bolton, ON</div>
+          <ul>
+            <li>Worked efficiently in a fast-paced, deadline-driven environment.</li>
+            <li>Ensured accuracy and consistency through quality checks and inventory tracking.</li>
+            <li>Demonstrated strong time management and task prioritisation.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-label">Education</div>
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Graphic Design — Advanced Diploma</span>
+            <span class="entry-date">01/2023 – 08/2026</span>
+          </div>
+          <div class="entry-org">Humber Polytechnic · Toronto, Canada</div>
+          <ul>
+            <li>Branding, visual communication, and design systems</li>
+            <li>Typography, layout, and editorial design</li>
+            <li>UI/UX fundamentals and digital media</li>
+            <li>Portfolio development across print and digital platforms</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Design Foundation — Certificate</span>
+            <span class="entry-date">01/2023 – 08/2023</span>
+          </div>
+          <div class="entry-org">Humber Polytechnic · Toronto, Canada</div>
+          <ul>
+            <li>Typography, colour theory, and composition</li>
+            <li>Adobe Illustrator, Photoshop, InDesign</li>
+            <li>Creative problem-solving and visual storytelling</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <aside>
+      <div class="section">
+        <div class="section-label">Skills</div>
+        <ul class="skill-list">
+          <li>Adobe Illustrator</li>
+          <li>Adobe Photoshop</li>
+          <li>Adobe InDesign</li>
+          <li>Adobe After Effects</li>
+          <li>Figma (UI/UX basics)</li>
+          <li>Branding &amp; Visual Identity</li>
+          <li>Illustration &amp; Concept Development</li>
+          <li>Layout Design (Print &amp; Digital)</li>
+          <li>Typography &amp; Colour Theory</li>
+          <li>Attention to Detail</li>
+          <li>Presentation &amp; Critique</li>
+        </ul>
+      </div>
+      <div class="section" style="margin-top:24px;">
+        <div class="section-label">Languages</div>
+        <ul class="skill-list">
+          <li>English</li>
+          <li>Gujarati</li>
+        </ul>
+      </div>
+      <div class="section" style="margin-top:24px;">
+        <div class="section-label">Portfolio</div>
+        <ul class="skill-list">
+          <li><a href="https://www.dhvanichauhan.com">dhvanichauhan.com</a></li>
+          <li><a href="https://www.behance.net/dhvanichauhan1">Behance</a></li>
+          <li><a href="https://www.instagram.com/designsbydc_/">@designsbydc_</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+  function closeMobile(){
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  }
+</script>
 </body>
 </html>
