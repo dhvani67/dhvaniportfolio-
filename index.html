@@ -384,6 +384,18 @@
 
       <article class="pcard reveal">
         <div class="pcard-img-wrap">
+          <img class="pcard-img" src="assets/images/house-of-lehar-cover.jpg" alt="House of Lehar brand identity and website design cover">
+        </div>
+        <div class="pcard-body">
+          <span class="pcard-meta">Brand Identity & Web Design</span>
+          <h3>House of Lehar</h3>
+          <p>A full brand identity and website build for House of Lehar — including logo design, a visual identity system, and a custom-designed site to bring the brand to life online.</p>
+          <a class="btn" href="project-house-of-lehar.html">View Project →</a>
+        </div>
+      </article>
+
+      <article class="pcard reveal">
+        <div class="pcard-img-wrap">
           <img class="pcard-img" src="assets/images/from-soil-to-soul-cover.jpg" alt="From Soil to Soul wine branding campaign cover">
         </div>
         <div class="pcard-body">
@@ -514,10 +526,12 @@
 <script>
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
-  });
+  if(hamburger){
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+  }
   function closeMobile(){
     hamburger.classList.remove('open');
     mobileMenu.classList.remove('open');
@@ -525,20 +539,3 @@
 </script>
 </body>
 </html>
-
-
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
-  });
-  function closeMobile(){
-    hamburger.classList.remove('open');
-    mobileMenu.classList.remove('open');
-  }
-</script>
-</body>
-</html>
-
