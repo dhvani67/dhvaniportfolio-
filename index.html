@@ -212,90 +212,22 @@
   .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
   .reveal.in{opacity:1; transform:translateY(0);}
 
-  /* ── Hamburger button ── */
-  .hamburger{
-    display:none; flex-direction:column; justify-content:center;
-    gap:5px; cursor:pointer; padding:4px; background:none; border:none; z-index:100;
-  }
-  .hamburger span{
-    display:block; width:22px; height:2px;
-    background:var(--ink); transition:transform .3s ease, opacity .3s ease;
-  }
-  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-  .hamburger.open span:nth-child(2){opacity:0;}
-  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-
-  /* Mobile slide-down menu */
-  .mobile-menu{
-    display:none; position:fixed; top:72px; left:0; right:0;
-    background:var(--paper); border-bottom:1px solid var(--line);
-    flex-direction:column; padding:16px 24px 24px;
-    z-index:49; box-shadow:0 8px 24px rgba(30,28,26,0.12);
-  }
-  .mobile-menu.open{display:flex;}
-  .mobile-menu a{
-    font-size:0.9rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase;
-    color:var(--ink-soft); padding:14px 0; border-bottom:1px solid var(--line); transition:color .2s;
-  }
-  .mobile-menu a:last-child{border-bottom:none; padding-bottom:0;}
-  .mobile-menu a:hover{color:var(--accent);}
-  .mobile-menu .mob-resume{
-    margin-top:14px; border:1.5px solid var(--ink); color:var(--ink) !important;
-    padding:12px 20px; text-align:center;
-  }
-  .mobile-menu .mob-resume:hover{background:var(--ink); color:var(--paper) !important;}
-
-  /* ── Tablet (≤900px) ── */
   @media (max-width:900px){
-    .wrap{padding:0 24px;}
-    .hamburger{display:flex;}
-    .navlinks{display:none;}
     .hero-main{padding:60px 0 40px;}
     .hero-stats{grid-template-columns:repeat(2, 1fr); row-gap:20px;}
     .side-stat{border-right:none; border-bottom:1px solid var(--line); padding:0 0 20px;}
     .side-stat:nth-child(odd){border-right:1px solid var(--line); padding-right:20px;}
     .about-section-grid{grid-template-columns:1fr; gap:28px;}
-    .frame{width:200px; margin:0 auto;}
+    .frame{width:140px; margin:0 auto;}
     .pin-grid{grid-template-columns:1fr;}
     .pcard{border-right:none !important;}
-    .pin-grid .pcard:nth-last-child(-n+2){border-bottom:1px solid var(--line);}
-    .pin-grid .pcard:last-child{border-bottom:none;}
     .process-row{grid-template-columns:repeat(2,1fr);}
     .process-step{border-bottom:1px solid var(--line);}
     .contact-grid{grid-template-columns:1fr;}
     .contact-divider{display:none;}
     .contact-right{padding-left:0; margin-top:36px;}
     .contact-left{padding-right:0;}
-  }
-
-  /* ── Mobile (≤600px) ── */
-  @media (max-width:600px){
-    .wrap{padding:0 20px;}
-    .section{padding:56px 0;}
-    .hero-main{padding:44px 0 36px;}
-    h1.title{font-size:clamp(1.8rem,8vw,2.8rem);}
-    .hero-sub{font-size:0.95rem;}
-    .hero-stats{grid-template-columns:1fr 1fr; row-gap:0;}
-    .side-stat{padding:16px 12px 16px 0;}
-    .side-stat:nth-child(odd){padding-right:16px;}
-    .section-head{margin-bottom:32px; gap:10px;}
-    h2.section-title{font-size:1.6rem;}
-    .about-section-grid{gap:20px;}
-    .frame{width:160px;}
-    .about-copy p{font-size:0.97rem;}
-    .skills-row{flex-wrap:wrap;}
-    .skill-chip{font-size:0.78rem; padding:8px 12px;}
-    .pcard-body{padding:22px 20px;}
-    .pcard h3{font-size:1.2rem;}
-    .pcard p{font-size:0.92rem; margin-bottom:18px;}
-    .btn{font-size:0.8rem;}
-    .process-row{grid-template-columns:1fr;}
-    .process-step{border-right:none; border-bottom:1px solid var(--line);}
-    .process-step:last-child{border-bottom:none;}
-    .contact-left{padding-right:0;}
-    .contact-row{padding:18px 16px; flex-direction:column; align-items:flex-start; gap:4px;}
-    .contact-value{font-size:0.88rem;}
-    footer{font-size:0.78rem; padding:20px 0;}
+    .navlinks{display:none;}
   }
 </style>
 </head>
@@ -309,6 +241,7 @@
       <a href="#work">Work</a>
       <a href="#process">Process</a>
       <a href="#contact">Contact</a>
+      <a href="assets/dhvani-chauhan-resume.pdf" target="_blank" rel="noopener" class="nav-resume">Resume</a>
     </div>
   </div>
 </nav>
@@ -384,18 +317,6 @@
 
       <article class="pcard reveal">
         <div class="pcard-img-wrap">
-          <img class="pcard-img" src="assets/images/House-of-Lehar-Laptop-and-Phone.png" alt="House of Lehar brand identity and website design cover">
-        </div>
-        <div class="pcard-body">
-          <span class="pcard-meta">Brand Identity & Web Design</span>
-          <h3>House of Lehar</h3>
-          <p>A full brand identity and website build for House of Lehar — including logo design, a visual identity system, and a custom-designed site to bring the brand to life online.</p>
-          <a class="btn" href="project-house-of-lehar.html">View Project →</a>
-        </div>
-      </article>
-
-      <article class="pcard reveal">
-        <div class="pcard-img-wrap">
           <img class="pcard-img" src="assets/images/from-soil-to-soul-cover.jpg" alt="From Soil to Soul wine branding campaign cover">
         </div>
         <div class="pcard-body">
@@ -439,6 +360,19 @@
           <h3>Enemies: A Tale for Lads and Lasses</h3>
           <p>A movie poster concept balancing mood and narrative tension, using layered type and a restrained palette to set the tone.</p>
           <a class="btn" href="project-enemies.html">View Project →</a>
+        </div>
+      </article>
+
+
+      <article class="pcard reveal">
+        <div class="pcard-img-wrap">
+          <img class="pcard-img" src="assets/images/kapoor-flyer-mockup.jpg" alt="Kapoor Beauty Spa brand identity and flyer">
+        </div>
+        <div class="pcard-body">
+          <span class="pcard-meta">Brand Identity &amp; Print Design</span>
+          <h3>Kapoor Beauty Spa</h3>
+          <p>A complete brand identity for a local beauty spa — from logo concept through to a printed grand opening flyer.</p>
+          <a class="btn" href="project-kapoor-beauty-spa.html">View Project →</a>
         </div>
       </article>
 
@@ -522,20 +456,119 @@
   reveals.forEach(el=>obs.observe(el));
 </script>
 
-
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  if(hamburger){
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('open');
-      mobileMenu.classList.toggle('open');
-    });
-  }
-  function closeMobile(){
-    hamburger.classList.remove('open');
-    mobileMenu.classList.remove('open');
-  }
-</script>
+</body>
+</html>
+<div class="page">
+  <header class="resume-header">
+    <div>
+      <div class="name">Dhvani <span>Chauhan</span></div>
+      <div class="title-label">Graphic Designer</div>
+    </div>
+    <div class="contact-list">
+      Toronto, Canada · ON M9W 3L9<br>
+      (+1) 647-569-0468<br>
+      <a href="mailto:dhvanicdesign@gmail.com">dhvanicdesign@gmail.com</a><br>
+      <a href="https://www.dhvanichauhan.com">dhvanichauhan.com</a><br>
+      <a href="https://www.linkedin.com/in/dhvanichauhan/">linkedin.com/in/dhvanichauhan</a>
+    </div>
+  </header>
+  <div class="body-grid">
+    <main>
+      <div class="section">
+        <div class="section-label">Personal Overview</div>
+        <p class="overview">Detail-oriented graphic design student with a strong foundation in branding, layout, and visual communication. Experienced in creating clear, well-structured designs across print and digital platforms. Comfortable working through feedback, managing multiple projects, and meeting deadlines. Currently building a professional portfolio and seeking opportunities to grow as a graphic designer in a collaborative environment.</p>
+      </div>
+      <div class="section">
+        <div class="section-label">Work Experience</div>
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Graphic Design Student Projects</span>
+            <span class="entry-date">2023 – Present</span>
+          </div>
+          <div class="entry-org">Humber Polytechnic · Etobicoke, ON</div>
+          <ul>
+            <li>Designed branding systems including logos, colour palettes, and typography for conceptual and client-based projects.</li>
+            <li>Created print and digital layouts — posters, social media graphics, packaging concepts, and editorial spreads.</li>
+            <li>Developed UI/UX wireframes and visual designs focused on usability and user experience.</li>
+            <li>Produced illustrations and visual assets to support storytelling and brand identity.</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Amazon Warehouse Associate</span>
+            <span class="entry-date">Feb 2022 – Aug 2022</span>
+          </div>
+          <div class="entry-org">Amazon · Bolton, ON</div>
+          <ul>
+            <li>Worked efficiently in a fast-paced, deadline-driven environment.</li>
+            <li>Ensured accuracy and consistency through quality checks and inventory tracking.</li>
+            <li>Demonstrated strong time management and task prioritisation.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-label">Education</div>
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Graphic Design — Advanced Diploma</span>
+            <span class="entry-date">01/2023 – 08/2026</span>
+          </div>
+          <div class="entry-org">Humber Polytechnic · Toronto, Canada</div>
+          <ul>
+            <li>Branding, visual communication, and design systems</li>
+            <li>Typography, layout, and editorial design</li>
+            <li>UI/UX fundamentals and digital media</li>
+            <li>Portfolio development across print and digital platforms</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Design Foundation — Certificate</span>
+            <span class="entry-date">01/2023 – 08/2023</span>
+          </div>
+          <div class="entry-org">Humber Polytechnic · Toronto, Canada</div>
+          <ul>
+            <li>Typography, colour theory, and composition</li>
+            <li>Adobe Illustrator, Photoshop, InDesign</li>
+            <li>Creative problem-solving and visual storytelling</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <aside>
+      <div class="section">
+        <div class="section-label">Skills</div>
+        <ul class="skill-list">
+          <li>Adobe Illustrator</li>
+          <li>Adobe Photoshop</li>
+          <li>Adobe InDesign</li>
+          <li>Adobe After Effects</li>
+          <li>Figma (UI/UX basics)</li>
+          <li>Branding &amp; Visual Identity</li>
+          <li>Illustration &amp; Concept Development</li>
+          <li>Layout Design (Print &amp; Digital)</li>
+          <li>Typography &amp; Colour Theory</li>
+          <li>Attention to Detail</li>
+          <li>Presentation &amp; Critique</li>
+        </ul>
+      </div>
+      <div class="section" style="margin-top:24px;">
+        <div class="section-label">Languages</div>
+        <ul class="skill-list">
+          <li>English</li>
+          <li>Gujarati</li>
+        </ul>
+      </div>
+      <div class="section" style="margin-top:24px;">
+        <div class="section-label">Portfolio</div>
+        <ul class="skill-list">
+          <li><a href="https://www.dhvanichauhan.com">dhvanichauhan.com</a></li>
+          <li><a href="https://www.behance.net/dhvanichauhan1">Behance</a></li>
+          <li><a href="https://www.instagram.com/designsbydc_/">@designsbydc_</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</div>
 </body>
 </html>
