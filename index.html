@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -212,29 +212,10 @@
   .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
   .reveal.in{opacity:1; transform:translateY(0);}
 
-  @media (max-width:900px){
-    .hero-main{padding:60px 0 40px;}
-    .hero-stats{grid-template-columns:repeat(2, 1fr); row-gap:20px;}
-    .side-stat{border-right:none; border-bottom:1px solid var(--line); padding:0 0 20px;}
-    .side-stat:nth-child(odd){border-right:1px solid var(--line); padding-right:20px;}
-    .about-section-grid{grid-template-columns:1fr; gap:28px;}
-    .frame{width:140px; margin:0 auto;}
-    .pin-grid{grid-template-columns:1fr;}
-    .pcard{border-right:none !important;}
-    .process-row{grid-template-columns:repeat(2,1fr);}
-    .process-step{border-bottom:1px solid var(--line);}
-    .contact-grid{grid-template-columns:1fr;}
-    .contact-divider{display:none;}
-    .contact-right{padding-left:0; margin-top:36px;}
-    .contact-left{padding-right:0;}
-    .navlinks{display:none;}
-  }
-
-  /* ── HAMBURGER MENU ── */
+  /* ── Hamburger button ── */
   .hamburger{
     display:none; flex-direction:column; justify-content:center;
-    gap:5px; cursor:pointer; padding:4px; background:none; border:none;
-    z-index:100;
+    gap:5px; cursor:pointer; padding:4px; background:none; border:none; z-index:100;
   }
   .hamburger span{
     display:block; width:22px; height:2px;
@@ -243,6 +224,8 @@
   .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
   .hamburger.open span:nth-child(2){opacity:0;}
   .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  /* Mobile slide-down menu */
   .mobile-menu{
     display:none; position:fixed; top:72px; left:0; right:0;
     background:var(--paper); border-bottom:1px solid var(--line);
@@ -251,26 +234,67 @@
   }
   .mobile-menu.open{display:flex;}
   .mobile-menu a{
-    font-size:0.9rem; font-weight:600; letter-spacing:0.06em;
-    text-transform:uppercase; color:var(--ink-soft);
-    padding:14px 0; border-bottom:1px solid var(--line); transition:color .2s;
+    font-size:0.9rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase;
+    color:var(--ink-soft); padding:14px 0; border-bottom:1px solid var(--line); transition:color .2s;
   }
   .mobile-menu a:last-child{border-bottom:none; padding-bottom:0;}
   .mobile-menu a:hover{color:var(--accent);}
+  .mobile-menu .mob-resume{
+    margin-top:14px; border:1.5px solid var(--ink); color:var(--ink) !important;
+    padding:12px 20px; text-align:center;
+  }
+  .mobile-menu .mob-resume:hover{background:var(--ink); color:var(--paper) !important;}
+
+  /* ── Tablet (≤900px) ── */
   @media (max-width:900px){
-    .hamburger{display:flex;}
     .wrap{padding:0 24px;}
+    .hamburger{display:flex;}
+    .navlinks{display:none;}
+    .hero-main{padding:60px 0 40px;}
+    .hero-stats{grid-template-columns:repeat(2, 1fr); row-gap:20px;}
+    .side-stat{border-right:none; border-bottom:1px solid var(--line); padding:0 0 20px;}
+    .side-stat:nth-child(odd){border-right:1px solid var(--line); padding-right:20px;}
+    .about-section-grid{grid-template-columns:1fr; gap:28px;}
+    .frame{width:200px; margin:0 auto;}
+    .pin-grid{grid-template-columns:1fr;}
+    .pcard{border-right:none !important;}
     .pin-grid .pcard:nth-last-child(-n+2){border-bottom:1px solid var(--line);}
     .pin-grid .pcard:last-child{border-bottom:none;}
+    .process-row{grid-template-columns:repeat(2,1fr);}
+    .process-step{border-bottom:1px solid var(--line);}
+    .contact-grid{grid-template-columns:1fr;}
+    .contact-divider{display:none;}
+    .contact-right{padding-left:0; margin-top:36px;}
+    .contact-left{padding-right:0;}
   }
+
+  /* ── Mobile (≤600px) ── */
   @media (max-width:600px){
     .wrap{padding:0 20px;}
     .section{padding:56px 0;}
     .hero-main{padding:44px 0 36px;}
+    h1.title{font-size:clamp(1.8rem,8vw,2.8rem);}
+    .hero-sub{font-size:0.95rem;}
+    .hero-stats{grid-template-columns:1fr 1fr; row-gap:0;}
+    .side-stat{padding:16px 12px 16px 0;}
+    .side-stat:nth-child(odd){padding-right:16px;}
+    .section-head{margin-bottom:32px; gap:10px;}
+    h2.section-title{font-size:1.6rem;}
+    .about-section-grid{gap:20px;}
+    .frame{width:160px;}
+    .about-copy p{font-size:0.97rem;}
+    .skills-row{flex-wrap:wrap;}
+    .skill-chip{font-size:0.78rem; padding:8px 12px;}
+    .pcard-body{padding:22px 20px;}
+    .pcard h3{font-size:1.2rem;}
+    .pcard p{font-size:0.92rem; margin-bottom:18px;}
+    .btn{font-size:0.8rem;}
     .process-row{grid-template-columns:1fr;}
     .process-step{border-right:none; border-bottom:1px solid var(--line);}
     .process-step:last-child{border-bottom:none;}
+    .contact-left{padding-right:0;}
     .contact-row{padding:18px 16px; flex-direction:column; align-items:flex-start; gap:4px;}
+    .contact-value{font-size:0.88rem;}
     footer{font-size:0.78rem; padding:20px 0;}
   }
 </style>
@@ -285,19 +309,9 @@
       <a href="#work">Work</a>
       <a href="#process">Process</a>
       <a href="#contact">Contact</a>
-    <button class="hamburger" id="hamburger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
     </div>
   </div>
 </nav>
-
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#about" onclick="closeMobile()">About</a>
-  <a href="#work" onclick="closeMobile()">Work</a>
-  <a href="#process" onclick="closeMobile()">Process</a>
-  <a href="#contact" onclick="closeMobile()">Contact</a>
-</div>
 
 <header class="hero">
   <div class="wrap">
@@ -370,6 +384,18 @@
 
       <article class="pcard reveal">
         <div class="pcard-img-wrap">
+          <img class="pcard-img" src="assets/images/House-of-Lehar-Laptop-and-Phone.png" alt="House of Lehar brand identity and website design cover">
+        </div>
+        <div class="pcard-body">
+          <span class="pcard-meta">Brand Identity & Web Design</span>
+          <h3>House of Lehar</h3>
+          <p>A full brand identity and website build for House of Lehar — including logo design, a visual identity system, and a custom-designed site to bring the brand to life online.</p>
+          <a class="btn" href="project-house-of-lehar.html">View Project →</a>
+        </div>
+      </article>
+
+      <article class="pcard reveal">
+        <div class="pcard-img-wrap">
           <img class="pcard-img" src="assets/images/from-soil-to-soul-cover.jpg" alt="From Soil to Soul wine branding campaign cover">
         </div>
         <div class="pcard-body">
@@ -413,31 +439,6 @@
           <h3>Enemies: A Tale for Lads and Lasses</h3>
           <p>A movie poster concept balancing mood and narrative tension, using layered type and a restrained palette to set the tone.</p>
           <a class="btn" href="project-enemies.html">View Project →</a>
-        </div>
-      </article>
-
-
-      <article class="pcard reveal">
-        <div class="pcard-img-wrap">
-          <img class="pcard-img" src="assets/images/house-of-lehar-cover.jpg" alt="House of Lehar UX design cover">
-        </div>
-        <div class="pcard-body">
-          <span class="pcard-meta">UX & Web Design</span>
-          <h3>House of Lehar</h3>
-          <p>A UX and web design project for an Indian fashion e-commerce brand — built around a clear user flow and a warm, editorial visual language.</p>
-          <a class="btn" href="project-house-of-lehar.html">View Project →</a>
-        </div>
-      </article>
-
-      <article class="pcard reveal">
-        <div class="pcard-img-wrap">
-          <img class="pcard-img" src="assets/images/kapoor-flyer-mockup.jpg" alt="Kapoor Beauty Spa brand identity and flyer">
-        </div>
-        <div class="pcard-body">
-          <span class="pcard-meta">Brand Identity &amp; Print Design</span>
-          <h3>Kapoor Beauty Spa</h3>
-          <p>A complete brand identity for a local beauty spa — from logo concept through to a printed grand opening flyer.</p>
-          <a class="btn" href="project-kapoor-beauty-spa.html">View Project →</a>
         </div>
       </article>
 
@@ -512,13 +513,25 @@
 <footer>
   © 2026 Dhvani Chauhan. All rights reserved.
 </footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); } });
+  }, {threshold:0.15});
+  reveals.forEach(el=>obs.observe(el));
+</script>
+
+
 <script>
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
-  });
+  if(hamburger){
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+  }
   function closeMobile(){
     hamburger.classList.remove('open');
     mobileMenu.classList.remove('open');
