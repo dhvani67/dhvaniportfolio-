@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -309,9 +309,19 @@
       <a href="#work">Work</a>
       <a href="#process">Process</a>
       <a href="#contact">Contact</a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
     </div>
   </div>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#work" onclick="closeMobile()">Work</a>
+  <a href="#process" onclick="closeMobile()">Process</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+</div>
 
 <header class="hero">
   <div class="wrap">
@@ -439,6 +449,18 @@
           <h3>Enemies: A Tale for Lads and Lasses</h3>
           <p>A movie poster concept balancing mood and narrative tension, using layered type and a restrained palette to set the tone.</p>
           <a class="btn" href="project-enemies.html">View Project →</a>
+        </div>
+      </article>
+
+      <article class="pcard reveal">
+        <div class="pcard-img-wrap">
+          <img class="pcard-img" src="assets/images/kapoor-flyer-mockup.jpg" alt="Kapoor Beauty Spa brand identity and flyer">
+        </div>
+        <div class="pcard-body">
+          <span class="pcard-meta">Brand Identity &amp; Print Design</span>
+          <h3>Kapoor Beauty Spa</h3>
+          <p>A complete brand identity for a local beauty spa — from logo concept through to a printed grand opening flyer.</p>
+          <a class="btn" href="project-kapoor-beauty-spa.html">View Project →</a>
         </div>
       </article>
 
